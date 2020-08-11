@@ -288,7 +288,9 @@ module Caracal
       def render_sectionbreak(xml, model)
         xml['w'].p do
           xml['w'].pPr do
-            xml['w'].sectPr
+            xml['w'].sectPr do
+              xml['w'].type section_break_options
+            end
           end
         end
       end
@@ -436,6 +438,12 @@ module Caracal
             'w:num'       => document.page_cols_num,
             'w:space'       => document.page_cols_space,
             'w:equalWidth'  => "on",
+        }
+      end
+
+      def section_break_options
+        {
+            'w:val'       => document.section_break_type,
         }
       end
 
