@@ -2,6 +2,7 @@ require 'caracal/core/models/base_model'
 require 'caracal/core/models/bookmark_model'
 require 'caracal/core/models/link_model'
 require 'caracal/core/models/text_model'
+require 'caracal/core/models/section_break_model'
 require 'caracal/errors'
 
 
@@ -128,7 +129,9 @@ module Caracal
 
         # .section_br
         def section_br
-          Caracal::Core::Models::SectionBreakModel.new()
+          model = Caracal::Core::Models::SectionBreakModel.new()
+          runs << model
+          model
         end
 
         # .link
