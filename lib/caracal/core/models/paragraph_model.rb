@@ -2,7 +2,6 @@ require 'caracal/core/models/base_model'
 require 'caracal/core/models/bookmark_model'
 require 'caracal/core/models/link_model'
 require 'caracal/core/models/text_model'
-require 'caracal/core/models/section_break_model'
 require 'caracal/errors'
 
 
