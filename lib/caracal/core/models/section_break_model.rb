@@ -14,7 +14,7 @@ module Caracal
         #-------------------------------------------------------------
 
         # constants
-        const_set(:DEFAULT_SECTION_BREAK_CONTINUOUS, "continuous")
+        const_set(:DEFAULT_SECTION_BREAK_CONTINUOUS, 'continuous')
 
         # accessors
         attr_reader :section_break_continuous
@@ -35,7 +35,9 @@ module Caracal
 
         # value can be 'continuous' or 'nextPage'
         def type(value)
-          @section_break_continuous = value.to_s
+          allowed = ['nextPage','continuous']
+          given   = value.to_s
+          @section_break_continuous = allowed.include?(given) ? given : 'portrait'
         end
 
 
