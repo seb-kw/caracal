@@ -445,7 +445,7 @@ module Caracal
 
       def section_break_options
         {
-            'w:val'       => document.section_break_continuous
+            'w:val'       => "continuous"
         }
       end
 
