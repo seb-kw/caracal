@@ -33,6 +33,7 @@ module Caracal
 
         #=============== SETTERS ==============================
 
+        # value can be 'continuous' or 'nextPage'
         def type(value)
           @section_break_continuous = value.to_s
         end

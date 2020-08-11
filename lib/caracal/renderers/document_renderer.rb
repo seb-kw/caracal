@@ -289,7 +289,7 @@ module Caracal
         xml['w'].p do
           xml['w'].pPr do
             xml['w'].sectPr do
-              xml['w'].type section_break_options
+              xml['w'].type "w:val='continuous'"#section_break_options
             end
           end
         end
