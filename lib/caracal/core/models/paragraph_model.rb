@@ -128,9 +128,7 @@ module Caracal
 
         # .section_br
         def section_br
-          model = Caracal::Core::Models::SectionBreakModel.new()
-          runs << model
-          model
+          Caracal::Core::Models::SectionBreakModel.new()
         end
 
         # .link

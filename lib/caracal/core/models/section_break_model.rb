@@ -6,7 +6,7 @@ module Caracal
     module Models
 
       # This class encapsulates the logic needed to store and manipulate
-      # line break data.
+      # section break data.
       #
       class SectionBreakModel < BaseModel; end
 
