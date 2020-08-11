@@ -19,6 +19,7 @@ require 'caracal/core/rules'
 require 'caracal/core/styles'
 require 'caracal/core/tables'
 require 'caracal/core/text'
+require 'caracal/core/section_breaks'
 
 require 'caracal/renderers/app_renderer'
 require 'caracal/renderers/content_types_renderer'
@@ -59,6 +60,7 @@ module Caracal
     include Caracal::Core::Images
     include Caracal::Core::Lists
     include Caracal::Core::PageBreaks
+    include Caracal::Core::SectionBreaks
     include Caracal::Core::Rules
     include Caracal::Core::Tables
     include Caracal::Core::Text

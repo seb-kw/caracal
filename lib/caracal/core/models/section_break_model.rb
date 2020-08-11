@@ -7,54 +7,53 @@ module Caracal
 
       # This class encapsulates the logic needed to store and manipulate
       # section break data.
-      #
-      class SectionBreakModel < BaseModel; end
-      #-------------------------------------------------------------
-      # Configuration
-      #-------------------------------------------------------------
+      class SectionBreakModel < BaseModel
 
-      # constants
-      const_set(:DEFAULT_SECTION_BREAK_TYPE, "continuous")
+        #-------------------------------------------------------------
+        # Configuration
+        #-------------------------------------------------------------
 
-      # accessors
-      attr_reader :section_break_type
+        # constants
+        const_set(:DEFAULT_SECTION_BREAK_CONTINUOUS, "continuous")
 
-      # initialization
-      def initialize(options={}, &block)
-        @section_break_type = DEFAULT_SECTION_BREAK_TYPE
+        # accessors
+        attr_reader :section_break_continuous
 
-        super options, &block
-      end
+        # initialization
+        def initialize(options={}, &block)
+          @section_break_continuous = DEFAULT_SECTION_BREAK_TYPE
 
-
-      #-------------------------------------------------------------
-      # Public Methods
-      #-------------------------------------------------------------
-
-      #=============== SETTERS ==============================
-
-      def type(value)
-        @section_break_type = value
-      end
-
-
-      #=============== VALIDATION ==============================
-
-      def valid?
-        if section_break_type == "continuous" || section_break_type == ""
-          true
+          super options, &block
         end
+
+
+        #-------------------------------------------------------------
+        # Public Methods
+        #-------------------------------------------------------------
+
+        #=============== SETTERS ==============================
+
+        def type(value)
+          value = !!value
+          if value == false
+            @section_break_continuous = ""
+          else
+            @section_break_continuous = "continuous"
+          end
+        end
+
+
+        #-------------------------------------------------------------
+        # Private Instance Methods
+        #-------------------------------------------------------------
+        private
+
+        def option_keys
+          [:continuous]
+        end
+
       end
 
-
-      #-------------------------------------------------------------
-      # Private Instance Methods
-      #-------------------------------------------------------------
-      private
-
-      def option_keys
-        [:type]
-      end
     end
   end
 end
