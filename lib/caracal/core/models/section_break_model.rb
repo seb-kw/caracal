@@ -36,7 +36,7 @@ module Caracal
         def type(value)
           value = !!value
           if value == false
-            @section_break_continuous = ""
+            @section_break_continuous = "nextPage"
           else
             @section_break_continuous = "continuous"
           end
