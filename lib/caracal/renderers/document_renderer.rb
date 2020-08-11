@@ -286,8 +286,10 @@ module Caracal
       end
 
       def render_sectionbreak(xml, model)
-        xml['w'].pPr do
-          xml['w'].sectPr
+        xml['w'].p do
+          xml['w'].pPr do
+            xml['w'].sectPr
+          end
         end
       end
 
