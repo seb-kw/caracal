@@ -439,13 +439,13 @@ module Caracal
         {
             'w:num'       => document.page_cols_num,
             'w:space'       => document.page_cols_space,
-            'w:equalWidth'  => "on",
+            'w:equalWidth'  => "on"
         }
       end
 
       def section_break_options
         {
-            'w:val'       => document.section_break_continuous,
+            'w:val'       => document.section_break_continuous
         }
       end
 
