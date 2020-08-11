@@ -21,7 +21,7 @@ module Caracal
 
         # initialization
         def initialize(options={}, &block)
-          @section_break_continuous = DEFAULT_SECTION_BREAK_TYPE
+          @section_break_continuous = DEFAULT_SECTION_BREAK_CONTINUOUS
 
           super options, &block
         end
