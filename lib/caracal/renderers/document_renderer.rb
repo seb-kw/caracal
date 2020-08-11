@@ -289,9 +289,10 @@ module Caracal
         xml['w'].p do
           xml['w'].pPr do
             xml['w'].sectPr do
-              xml['w'].type do
-                section_break_options
-              end #"w:val=\"continuous\""
+              xml['w'].type section_break_options #"w:val=\"continuous\""
+              xml['w'].pgSz page_size_options
+              xml['w'].pgMar page_margin_options
+              xml['w'].cols page_cols_options
             end
           end
         end
