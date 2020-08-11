@@ -285,6 +285,14 @@ module Caracal
         end
       end
 
+      def render_section_break(xml, model)
+        xml['w'].p do
+          xml['w'].pPr do
+            xml['w'].sectPr
+          end
+        end
+      end
+
       def render_rule(xml, model)
         options = { 'w:color' => model.rule_color, 'w:sz' => model.rule_size, 'w:val' => model.rule_line, 'w:space' => model.rule_spacing }
 

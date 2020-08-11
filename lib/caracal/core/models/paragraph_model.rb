@@ -126,6 +126,13 @@ module Caracal
           model
         end
 
+        # .section_br
+        def section_br
+          model = Caracal::Core::Models::SectionBreakModel.new()
+          runs << model
+          model
+        end
+
         # .link
         def link(*args, &block)
           options = Caracal::Utilities.extract_options!(args)
